@@ -1,0 +1,63 @@
+<% layout('layouts/boilerplate') %>
+<div class="row">
+    
+        <h1 class="text-center mt-4">New Hotel</h1>
+    
+    
+   
+
+    
+    <div class="col-6 offset-md-3">
+
+        
+        <form action='/hotels' method="POST" novalidate class="validatedForm" enctype="multipart/form-data">
+            <div class='mb-4'>
+                <label class="form-label" for="title">Title</label>
+                <input class="form-control" type="text" id="title" name="hotel[title]" required>
+                
+            </div>
+            <div class='mb-4'>
+                <label class="form-label" for="price">Price</label>
+                <div class="input-group">
+                   <div class="input-group-prepend">
+                       <span class="input-group-text" id="price-label">$</span>
+                    </div>
+                   <input type="text" class="form-control" id="price" placeholder="0.00" aria-label="price" 
+                   name="hotel[price]" required>
+               </div>
+            </div>
+
+
+            <div class='mb-4'>
+                <label class="form-label" for="location">Location</label>
+                <input class="form-control" type="text" id="location" name="hotel[location]" required>
+                
+            </div>
+
+            
+
+            <div class='mb-4'>
+                <label class="form-label" for="description">Description</label>
+                <textarea class="form-control" type="text" id="description" name="hotel[description]"
+                required placeholder="Your first-hand experiences really help other travelers. Thanks!
+                "></textarea>
+                
+            </div>
+
+
+            <div class="mb-4">
+                <label for="image" class="form-label">Do you have photos to share?(optional)</label>
+                <input class="form-control" type="file" id="image" name="image" multiple>
+            </div>  
+           
+            <button class='mb-4 btn btn-dark'>Add Hotel</button>
+        
+        </form>
+        
+    </div>
+</div>
+
+
+
+
+  
